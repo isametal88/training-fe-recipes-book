@@ -1,0 +1,191 @@
+{
+    "recipes": [
+        {
+            "name": "Spaghetti alla Carbonara",
+            "difficulty": "Media",
+            "preparation_time": "20 minuti",
+            "image": "carbonara.jpg",
+            "preparation": [
+                "Cuocere gli spaghetti.",
+                "In una ciotola, mescolare uova e formaggio.",
+                "Friggere la pancetta.",
+                "Unire tutti gli ingredienti."
+            ],
+            "ingredients": {
+                "Spaghetti": "100g",
+                "Uova": "1",
+                "Pecorino": "50g",
+                "Pancetta": "50g",
+                "Pepe": "q.b."
+            },
+            "allergies": [
+                "Glutine",
+                "Uova",
+                "Latticini"
+            ]
+        },
+        {
+            "name": "Pizza Margherita",
+            "difficulty": "Facile",
+            "preparation_time": "30 minuti",
+            "image": "margherita_pizza.jpg",
+            "preparation": [
+                "Preparare l'impasto.",
+                "Stendere la salsa di pomodoro.",
+                "Aggiungere mozzarella e basilico.",
+                "Cuocere in forno."
+            ],
+            "ingredients": {
+                "Farina": "200g",
+                "Acqua": "100ml",
+                "Lievito": "5g",
+                "Sale": "q.b.",
+                "Salsa di Pomodoro": "100g",
+                "Mozzarella": "100g",
+                "Basilico": "q.b."
+            },
+            "allergies": [
+                "Glutine",
+                "Latticini"
+            ]
+        },
+        {
+            "name": "Pollo al Curry",
+            "difficulty": "Difficile",
+            "preparation_time": "45 minuti",
+            "image": "chicken_curry.jpg",
+            "preparation": [
+                "Cuocere il pollo.",
+                "Preparare la salsa al curry con le spezie.",
+                "Unire il pollo e la salsa.",
+                "Cuocere a fuoco basso fino a cottura ultimata."
+            ],
+            "ingredients": {
+                "Pollo": "200g",
+                "Cipolla": "1",
+                "Aglio": "1 spicchio",
+                "Zenzero": "10g",
+                "Spezie": "q.b.",
+                "Latte di Cocco": "100ml",
+                "Olio": "q.b."
+            },
+            "allergies": [
+                "Latte di Cocco"
+            ]
+        },
+        {
+            "name": "Insalata Caesar",
+            "difficulty": "Facile",
+            "preparation_time": "15 minuti",
+            "image": "caesar_salad.jpg",
+            "preparation": [
+                "Preparare la lattuga.",
+                "Aggiungere crostini e parmigiano.",
+                "Condire con salsa Caesar."
+            ],
+            "ingredients": {
+                "Lattuga": "100g",
+                "Crostini": "50g",
+                "Parmigiano": "30g",
+                "Salsa Caesar": "50ml"
+            },
+            "allergies": [
+                "Glutine",
+                "Latticini"
+            ]
+        },
+        {
+            "name": "Manzo alla Stroganoff",
+            "difficulty": "Media",
+            "preparation_time": "40 minuti",
+            "image": "beef_stroganoff.jpg",
+            "preparation": [
+                "Cuocere il manzo.",
+                "Preparare la salsa con panna acida e funghi.",
+                "Unire il manzo e la salsa.",
+                "Cuocere fino a cottura ultimata."
+            ],
+            "ingredients": {
+                "Manzo": "200g",
+                "Funghi": "100g",
+                "Cipolla": "1",
+                "Panna Acida": "100ml",
+                "Olio": "q.b.",
+                "Sale": "q.b.",
+                "Pepe": "q.b."
+            },
+            "allergies": [
+                "Latticini"
+            ]
+        },
+        {
+            "name": "Verdure Saltate",
+            "difficulty": "Facile",
+            "preparation_time": "25 minuti",
+            "image": "vegetable_stir_fry.jpg",
+            "preparation": [
+                "Tagliare le verdure.",
+                "Saltare in padella con olio e salsa di soia.",
+                "Cuocere fino a cottura ultimata."
+            ],
+            "ingredients": {
+                "Verdure Miste": "200g",
+                "Olio": "q.b.",
+                "Salsa di Soia": "30ml"
+            },
+            "allergies": [
+                "Soia"
+            ]
+        },
+        {
+            "name": "Crostata al Limone",
+            "difficulty": "Media",
+            "preparation_time": "50 minuti",
+            "image": "lemon_tart.jpg",
+            "preparation": [
+                "Preparare la base della crostata.",
+                "Preparare la crema al limone.",
+                "Versare la crema sulla base.",
+                "Cuocere in forno."
+            ],
+            "ingredients": {
+                "Farina": "200g",
+                "Burro": "100g",
+                "Zucchero": "100g",
+                "Uova": "2",
+                "Limoni": "2",
+                "Latte": "100ml"
+            },
+            "allergies": [
+                "Glutine",
+                "Latticini",
+                "Uova"
+            ]
+        },
+        {
+            "name": "Torta al Cioccolato",
+            "difficulty": "Difficile",
+            "preparation_time": "60 minuti",
+            "image": "chocolate_cake.jpg",
+            "preparation": [
+                "Preparare l'impasto della torta.",
+                "Cuocere in forno.",
+                "Preparare la glassa al cioccolato.",
+                "Ricoprire la torta con la glassa."
+            ],
+            "ingredients": {
+                "Farina": "200g",
+                "Zucchero": "150g",
+                "Uova": "3",
+                "Burro": "100g",
+                "Cioccolato": "200g",
+                "Lievito": "10g"
+            },
+            "allergies": [
+                "Glutine",
+                "Latticini",
+                "Uova"
+            ]
+        }
+    ]
+}

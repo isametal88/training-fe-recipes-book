@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricettario</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <title-1>Benvenuti nel Ricettario</title-1>
+        </header>
+        <main>
+            <section>
+                <title-2>Le Nostre Ricette</title-2>
+                <!-- Contenuto delle ricette -->
+
+                <input type="number" id="recipe-id" placeholder="Inserisci il numero di persone"
+                    onchange="changeNumber(this.value)">
+
+                <recipe-instructions id="recipe" people="4">prova</recipe-instructions>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2023 Ricettario. Tutti i diritti riservati.</p>
+        </footer>
+    </div>
+
+    <script type="module" src="/design-system/index.js"></script>
+    <script>
+
+        function changeNumber() {
+            document.getElementById('recipe').setAttribute('people', event.target.value);
+        }
+    </script>
+</body>
+
+</html>
+
+</html>
