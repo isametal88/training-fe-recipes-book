@@ -1,4 +1,4 @@
-const RECIPES = [
+export const RECIPES = [
   {
     name: "Spaghetti alla Carbonara",
     difficulty: "Media",

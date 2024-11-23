@@ -7,10 +7,10 @@
     <title>Ricettario</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <script type="module" src="/design-system/index.js"></script>
 </head>
 
 <body>
-
     <div class="container">
         <header>
             <title-1>Benvenuti nel Ricettario</title-1>
@@ -20,83 +20,21 @@
                 <div class="columns-2">
                     <div>
                         <title-2>Le Nostre Ricette</title-2>
-                        <!-- Contenuto delle ricette -->
-
                         <ul id="recipes-list"></ul>
-
                         <button onclick="loadFromInternet()">Carica da internet</button>
-
                         <ul id="recipes-list-2"></ul>
                     </div>
                     <div>
                         <recipe-instructions id="recipe"></recipe-instructions>
                     </div>
                 </div>
-
-
             </section>
         </main>
         <footer>
-            <p>&copy; 2023 Ricettario. Tutti i diritti riservati.</p>
+            <p>&copy; 2025 Ricettario. Tutti i diritti riservati.</p>
         </footer>
     </div>
-
-    <script type="module" src="/design-system/index.js"></script>
-    <script src="/data/data.js"></script>
-
-    <script>
-
-        document.querySelector('#recipes-list').innerHTML = RECIPES.map((recipe, index) => {
-            return `<li><a href="#" onclick="selectRecipe(${index})">${recipe.name}</a></li>`;
-        }).join('');
-
-        function selectRecipe(recipeIndex) {
-            const recipe = RECIPES[recipeIndex];
-            document.getElementById('recipe').setAttribute('recipe', btoa(JSON.stringify(recipe)));
-        }
-
-
-
-        function loadFromInternet() {
-            fetch('https://dummyjson.com/recipes')
-                .then(res => res.json())
-                .then(({ recipes }) => {
-                    console.log(recipes)
-                    return recipes.map(r => {
-                        return {
-                            ...r,
-                            preparation: r.instructions,
-                            preparation_time: r.prepTimeMinutes + "min",
-                            difficulty: ((d) => {
-                                switch (d) {
-                                    case 'Easy': return 'Facile';
-                                    case 'Medium': return 'Media';
-                                    case 'Hard': return 'Difficile';
-                                }
-                            })(r.difficulty),
-                            ingredients: r.ingredients.map(i => {
-                                return {
-                                    name: i,
-                                    quantity: '',
-                                }
-                            })
-                        }
-                    })
-                })
-                .then((recipes) => {
-
-                    window.selectRecipeFromInternet = (recipeIndex) => {
-                        const recipe = recipes[recipeIndex];
-                        console.log(recipe);
-                        document.getElementById('recipe').setAttribute('recipe', btoa(JSON.stringify(recipe)));
-                    }
-
-                    document.querySelector('#recipes-list-2').innerHTML = recipes.map((recipe, index) => {
-                        return `<li><a href="#" onclick="selectRecipeFromInternet(${index})">${recipe.name}</a></li>`;
-                    }).join('');
-                });
-        }
-    </script>
+    <script type="module" src="scripts.js"></script>
 </body>
 
 </html>
