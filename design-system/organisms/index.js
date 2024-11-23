@@ -1,1 +1,1 @@
-export * from "./src/recipe-instructions/recipe-instructions.js";
+export * from "./src/recipe-metadata/recipe-metadata.js";

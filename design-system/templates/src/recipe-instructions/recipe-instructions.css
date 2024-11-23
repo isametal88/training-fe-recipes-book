@@ -1,0 +1,20 @@
+.recipe {
+    border: 1px solid #e0e0e0;
+
+    min-width: 300px;
+    min-height: 300px;
+}
+
+:host {
+
+    display: block;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 8px;
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px;
+    }
+}

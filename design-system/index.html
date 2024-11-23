@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricettario - Design System</title>
+
+    <link rel="stylesheet" href="index.css">
+
+    <script type="module" src="index.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Design System</h1>
+        </header>
+        <main>
+            <section>
+                <h2>Atomi</h2>
+                <div class="component">
+                    <h3>Componente: Ingredient (recipe-ingredient)</h3>
+                    <div>
+                        <recipe-ingredient name="Farina" quantity="500g"></recipe-ingredient>
+                    </div>
+                </div>
+                <div class="component">
+                    <h3>Componente: Step (recipe-step)</h3>
+                    <div>
+                        <recipe-step>Metti l'acqua a bollire</recipe-step>
+                    </div>
+                </div>
+                <div class="component">
+                    <h3>Componente: Tag (simple-tag)</h3>
+                    <div>
+                        <simple-tag>Tag semplice</simple-tag>
+                    </div>
+                </div>
+                <div class="component">
+                    <h3>Componente: Title 1 (title-1)</h3>
+                    <div>
+                        <title-1>Title 1</title-1>
+                    </div>
+                </div>
+                <div class="component">
+                    <h3>Componente: Title 2 (title-2)</h3>
+                    <div>
+                        <title-2>Title 2</title-2>
+                    </div>
+                </div>
+                <div class="component">
+                    <h3>Componente: Title 3 (title-3)</h3>
+                    <div>
+                        <title-3>Title 3</title-3>
+                    </div>
+                </div>
+
+            </section>
+            <section>
+                <h2>Molecole</h2>
+                <div class="component">
+                    <h3>Componente: Difficoltà ricetta (recipe-difficulty)</h3>
+                    <div>
+                        <recipe-difficulty difficulty="Facile"></recipe-difficulty>
+                        <recipe-difficulty difficulty="Media"></recipe-difficulty>
+                        <recipe-difficulty difficulty="Difficile"></recipe-difficulty>
+                    </div>
+                </div>
+                <div class="component">
+                    <h3>Componente: Lista ingredienti (recipe-ingredients)</h3>
+                    <div>
+                        <recipe-ingredients
+                            ingredients="W3sibmFtZSI6ICJGYXJpbmEiLAogICAgICAgICAgICAgICAgInF1YW50aXR5IjogIjIwMGciCiAgICAgICAgICAgIH0sCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICJuYW1lIjogIlp1Y2NoZXJvIiwKICAgICAgICAgICAgICAgICJxdWFudGl0eSI6ICIxNTBnIgogICAgICAgICAgICB9XQ=="></recipe-ingredients>
+                    </div>
+                </div>
+
+                <div class="component">
+                    <h3>Componente: Lista istruzioni (recipe-ingredients)</h3>
+                    <div>
+                        <recipe-steps
+                            steps="WyJQcmVwYXJhcmUgbCdpbXBhc3RvIGRlbGxhIHRvcnRhLiIsCiAgICAgICAgICAgICJDdW9jZXJlIGluIGZvcm5vLiJd"></recipe-steps>
+                    </div>
+                </div>
+                <div class="component">
+                    <h3>Componente: Tempo ricetta (recipe-timing)</h3>
+                    <div>
+                        <recipe-timing timing="1 ora"></recipe-timing>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h2>Organismi</h2>
+                <div class="component">
+                    <h3>Componente: Metadata ricetta (recipe-metadata)</h3>
+                    <div>
+                        <recipe-metadata timing="1 ora" difficulty="Difficile"></recipe-metadata>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h2>Template</h2>
+
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2023 Ricettario. Tutti i diritti riservati.</p>
+        </footer>
+    </div>
+
+</body>
+
+</html>

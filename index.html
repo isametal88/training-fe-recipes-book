@@ -20,10 +20,13 @@
                 <title-2>Le Nostre Ricette</title-2>
                 <!-- Contenuto delle ricette -->
 
-                <input type="number" id="recipe-id" placeholder="Inserisci il numero di persone"
-                    onchange="changeNumber(this.value)">
+                <ul id="recipes-list"></ul>
 
-                <recipe-instructions id="recipe" people="4">prova</recipe-instructions>
+                <button onclick="loadFromInternet()">Carica da internet</button>
+
+                <ul id="recipes-list-2"></ul>
+
+                <recipe-instructions id="recipe"></recipe-instructions>
             </section>
         </main>
         <footer>
@@ -32,14 +35,37 @@
     </div>
 
     <script type="module" src="/design-system/index.js"></script>
+    <script src="/data/data.js"></script>
+
     <script>
 
-        function changeNumber() {
-            document.getElementById('recipe').setAttribute('people', event.target.value);
+        document.querySelector('#recipes-list').innerHTML = RECIPES.map((recipe, index) => {
+            return `<li><a href="#" onclick="selectRecipe(${index})">${recipe.name}</a></li>`;
+        }).join('');
+
+        function selectRecipe(recipeIndex) {
+            const recipe = RECIPES[recipeIndex];
+            document.getElementById('recipe').setAttribute('recipe', btoa(JSON.stringify(recipe)));
+        }
+
+
+
+        function loadFromInternet() {
+            fetch('https://dummyjson.com/recipes')
+                .then(res => res.json())
+                .then(({ recipes }) => {
+
+                    function selectRecipeFromInternet(recipeIndex) {
+                        const recipe = recipes[recipeIndex];
+                        document.getElementById('recipe').setAttribute('recipe', btoa(JSON.stringify(recipe)));
+                    }
+
+                    document.querySelector('#recipes-list-2').innerHTML = recipes.map((recipe, index) => {
+                        return `<li><a href="#" onclick="selectRecipeFromInternet(${index})">${recipe.name}</a></li>`;
+                    }).join('');
+                });
         }
     </script>
 </body>
-
-</html>
 
 </html>

@@ -1,0 +1,17 @@
+:host {
+
+    simple-tag.easy {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+    simple-tag.medium {
+        background-color: #FFC107;
+        color: white;
+    }
+
+    simple-tag.hard {
+        background-color: #F44336;
+        color: white;
+    }
+}

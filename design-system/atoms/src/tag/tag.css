@@ -1,0 +1,9 @@
+@import url('/design-system/common.css');
+
+:host {
+    font-family: "Marck Script", cursive;
+    padding: 4px;
+    background-color: white;
+    color: black;
+    border-radius: 4px;
+}

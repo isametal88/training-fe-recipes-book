@@ -1,7 +1,7 @@
 @import url('/design-system/common.css');
 
 :host {
-    h1 {
+    h2 {
         font-family: "Marck Script", cursive;
     }
 }
