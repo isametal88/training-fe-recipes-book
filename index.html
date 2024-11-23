@@ -17,16 +17,23 @@
         </header>
         <main>
             <section>
-                <title-2>Le Nostre Ricette</title-2>
-                <!-- Contenuto delle ricette -->
+                <div class="columns-2">
+                    <div>
+                        <title-2>Le Nostre Ricette</title-2>
+                        <!-- Contenuto delle ricette -->
 
-                <ul id="recipes-list"></ul>
+                        <ul id="recipes-list"></ul>
 
-                <button onclick="loadFromInternet()">Carica da internet</button>
+                        <button onclick="loadFromInternet()">Carica da internet</button>
 
-                <ul id="recipes-list-2"></ul>
+                        <ul id="recipes-list-2"></ul>
+                    </div>
+                    <div>
+                        <recipe-instructions id="recipe"></recipe-instructions>
+                    </div>
+                </div>
 
-                <recipe-instructions id="recipe"></recipe-instructions>
+
             </section>
         </main>
         <footer>
@@ -54,9 +61,33 @@
             fetch('https://dummyjson.com/recipes')
                 .then(res => res.json())
                 .then(({ recipes }) => {
+                    console.log(recipes)
+                    return recipes.map(r => {
+                        return {
+                            ...r,
+                            preparation: r.instructions,
+                            preparation_time: r.prepTimeMinutes + "min",
+                            difficulty: ((d) => {
+                                switch (d) {
+                                    case 'Easy': return 'Facile';
+                                    case 'Medium': return 'Media';
+                                    case 'Hard': return 'Difficile';
+                                }
+                            })(r.difficulty),
+                            ingredients: r.ingredients.map(i => {
+                                return {
+                                    name: i,
+                                    quantity: '',
+                                }
+                            })
+                        }
+                    })
+                })
+                .then((recipes) => {
 
-                    function selectRecipeFromInternet(recipeIndex) {
+                    window.selectRecipeFromInternet = (recipeIndex) => {
                         const recipe = recipes[recipeIndex];
+                        console.log(recipe);
                         document.getElementById('recipe').setAttribute('recipe', btoa(JSON.stringify(recipe)));
                     }
 
